@@ -9,59 +9,86 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f2f2f2;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px 0;
             text-align: center;
         }
         nav {
             background-color: #444;
             color: #fff;
-            padding: 10px;
+            padding: 10px 0;
             text-align: center;
         }
         nav a {
             color: #fff;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 20px;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00;
         }
         section {
-            padding: 20px;
-            margin-bottom: 60px; /* Added to create space for footer */
+            padding: 50px 20px;
+            margin-bottom: 60px;
         }
         h2 {
             color: #333;
-        }
-        p {
-            color: #555;
+            text-align: center;
+            margin-bottom: 30px;
         }
         .container {
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
             background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
         }
         footer {
             background-color: #333;
             color: #fff;
-            padding: 10px;
+            padding: 20px 0;
             text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
         }
         .gallery img {
             width: 100%;
             height: auto;
-            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
         }
         .contact-info {
             text-align: center;
+            margin-top: 30px;
+        }
+        button {
+            background-color: #ffcc00;
+            color: #333;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #f2c200;
         }
     </style>
 </head>
@@ -70,12 +97,13 @@
         <h1>Florea's Resthouse</h1>
     </header>
     <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Gallery</a>
-        <a href="#">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#attractions">Tourist Attractions</a>
+        <a href="#contact">Contact</a>
     </nav>
-    <section>
+    <section id="home">
         <div class="container">
             <h2>Welcome to Florea's Resthouse</h2>
             <p>Experience a home away from home in our cozy rental house. Perfect for family vacations or group getaways.</p>
@@ -88,16 +116,49 @@
                 <li>On-site parking</li>
             </ul>
             <h3>Location</h3>
-            <p>Our rental house is located in a peaceful neighborhood, just a short drive from major attractions and amenities.</p>
+            <p>Our rental house is located at Gheorghe Tulbure number 6, Oradea. Just a short drive from major attractions and amenities.</p>
             <h3>Rates</h3>
-            <p>Starting from €150 per night.</p>
+            <p>Starting from $100 per night.</p>
         </div>
     </section>
-    <section>
+    <section id="about" style="background-color: #f9f9f9;">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Florea's Resthouse, where luxury meets tranquility. Nestled amidst lush greenery and overlooking breathtaking landscapes, our accommodation offers an unparalleled experience of comfort and indulgence. Immerse yourself in the lavish interiors, unwind in the spacious bedrooms, and savor the finest amenities tailored to elevate your stay to new heights of opulence. Whether you seek a romantic retreat, a family getaway, or a corporate escape, Florea's Resthouse promises an unforgettable stay tailored to your every desire.</p>
+        </div>
+    </section>
+    <section id="gallery" style="background-color: #f2f2f2;">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <img src="background.jpg" alt="House Image">
+                <!-- Add more images here -->
+            </div>
+        </div>
+    </section>
+    <section id="attractions">
+        <div class="container">
+            <h2>Tourist Attractions in Oradea</h2>
+            <ul>
+                <li>Oradea Fortress</li>
+                <li>The Black Eagle Palace</li>
+                <li>Baroque Palace</li>
+                <li>Oradea City Hall</li>
+                <li>Ady Endre Museum</li>
+                <!-- Add more attractions here -->
+            </ul>
+        </div>
+    </section>
+    <section id="contact">
         <div class="container">
             <h2>Contact Us</h2>
             <div class="contact-info">
-                <p>For inquiries and reservations, please call: <strong>0744816128</strong></p>
+                <p>For inquiries and reservations, please call: <strong>+40729254939</strong></p>
+                <button>Contact Us</button>
+            </div>
+            <h3>Location</h3>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.0732390523477!2d21.908511215917582!3d47.06666997915212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47451073d6795a51%3A0xf9441d4d14b024c1!2sGheorghe%20Tulbure%20Street%2C%20Oradea%2C%20Romania!5e0!3m2!1sen!2sro!4v1648430254307!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
@@ -105,4 +166,4 @@
         <p>&copy; 2024 Florea's Resthouse. All rights reserved.</p>
     </footer>
 </body>
-</html>
+</
