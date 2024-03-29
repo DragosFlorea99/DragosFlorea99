@@ -4,190 +4,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Florea's Resthouse - House Rental Accommodation</title>
+    <!-- Your CSS file -->
+    <link rel="stylesheet" href="style.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 18px;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffcc00;
-        }
-        section {
-            padding: 50px 20px;
-            margin-bottom: 60px;
-        }
-        h2 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            grid-gap: 20px;
-        }
-        .gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-        .gallery img:hover {
-            transform: scale(1.05);
-        }
-        .contact-info {
-            text-align: center;
-            margin-top: 30px;
-        }
-        button {
-            background-color: #ffcc00;
-            color: #333;
-            border: none;
-            padding: 10px 20px;
-            font-size: 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        button:hover {
-            background-color: #f2c200;
-        }
-        /* Adjust the width of the map container for phones in portrait mode */
-        .map-container {
-            width: 100%;
-            overflow: hidden;
+        /* Your inline CSS */
+        #toggleLanguage {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9999; /* Ensure the button is above other elements */
+            width: 30px; /* Adjust width as needed */
+            height: auto; /* Ensure aspect ratio */
+            cursor: pointer; /* Change cursor to pointer */
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Florea's Resthouse</h1>
+        <h1 data-translation-en="Florea's Resthouse" data-translation-ro="Florea's Resthouse">Florea's Resthouse</h1>
     </header>
     <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#attractions">Tourist Attractions</a>
-        <a href="#contact">Contact</a>
+        <a href="#home" data-translation-en="Home" data-translation-ro="Acasa">Home</a>
+        <a href="#about" data-translation-en="About" data-translation-ro="Despre">About</a>
+        <a href="#gallery" data-translation-en="Gallery" data-translation-ro="Galerie">Gallery</a>
+        <a href="#attractions" data-translation-en="Tourist Attractions" data-translation-ro="Atractii Turistice">Tourist Attractions</a>
+        <a href="#contact" data-translation-en="Contact" data-translation-ro="Contact">Contact</a>
     </nav>
     <section id="home">
         <div class="container">
-            <h2>Welcome to Florea's Resthouse</h2>
-            <p>Experience a home away from home in our cozy rental house. Perfect for family vacations or group getaways.</p>
-            <h3>Features</h3>
+            <h2 data-translation-en="Welcome to Florea's Resthouse" data-translation-ro="Bine ati venit la Casa de Oaspeti a familiei Florea">Welcome to Florea's Resthouse</h2>
+            <p data-translation-en="Experience a home away from home in our cozy rental house. Perfect for family vacations or group getaways." data-translation-ro="Experminetati o casa departe de casa în casa noastra de închiriat. Perfect pentru vacan?e în familie sau escapade de grup.">Experience a home away from home in our cozy rental house. Perfect for family vacations or group getaways.</p>
+            <h3 data-translation-en="Features" data-translation-ro="Caracteristici">Features</h3>
             <ul>
-                <li>Spacious bedrooms</li>
-                <li>Fully equipped kitchen</li>
-                <li>Private garden</li>
-                <li>Free Wi-Fi</li>
-                <li>On-site parking</li>
+                <li data-translation-en="Spacious bedrooms" data-translation-ro="Dormitoare spa?ioase">Spacious bedrooms</li>
+                <li data-translation-en="Fully equipped kitchen" data-translation-ro="Bucatarie complet utilata">Fully equipped kitchen</li>
+                <li data-translation-en="Private garden" data-translation-ro="Gradina privata">Private garden</li>
+                <li data-translation-en="Free Wi-Fi" data-translation-ro="Wi-Fi gratuit">Free Wi-Fi</li>
+                <li data-translation-en="On-site parking" data-translation-ro="Parcare pe proprietate">On-site parking</li>
             </ul>
-            <h3>Location</h3>
-            <p>Our rental house is located at Gheorghe Tulbure number 6, Oradea. Just a short drive from major attractions and amenities.</p>
-            <h3>Rates</h3>
-            <p>Starting from $115(568RON) per night.</p>
+            <h3 data-translation-en="Location" data-translation-ro="Loca?ie">Location</h3>
+            <p data-translation-en="Our rental house is located at Gheorghe Tulbure number 6, Oradea. Just a short drive from major attractions and amenities." data-translation-ro="Casa noastra de închiriat este situata pe strada Gheorghe Tulbure, numarul 6, Oradea. La scurta distan?a de atrac?iile majore ?i facilita?i.">Our rental house is located at Gheorghe Tulbure number 6, Oradea. Just a short drive from major attractions and amenities.</p>
+            <h3 data-translation-en="Rates" data-translation-ro="Tarife">Rates</h3>
+            <p data-translation-en="Starting from $115(568RON) per night." data-translation-ro="Începând de la $115(568RON) pe noapte.">Starting from $115(568RON) per night.</p>
         </div>
     </section>
-	<section id="gallery" style="background-color: #f2f2f2;">
+    <section id="gallery" style="background-color: #f2f2f2;">
         <div class="container">
-            <h2>Gallery</h2>
+            <h2 data-translation-en="Gallery" data-translation-ro="Galerie">Gallery</h2>
             <div class="gallery">           
+                <!-- Add alt attributes for accessibility -->
                 <img src="background1.jpg" alt="House Image">
-				<img src="background2.jpg" alt="House Image">
-				<img src="background3.jpg" alt="House Image">
-				<img src="background.jpg" alt="House Image">
-				<img src="background4.jpg" alt="House Image">
-				<img src="background5.jpg" alt="House Image">
-				<img src="background6.jpg" alt="House Image">
-				<img src="background7.jpg" alt="House Image">
-				<img src="background8.jpg" alt="House Image">
-				<img src="background9.jpg" alt="House Image">
+                <img src="background2.jpg" alt="House Image">
+                <img src="background3.jpg" alt="House Image">
+                <img src="background.jpg" alt="House Image">
+                <img src="background4.jpg" alt="House Image">
+                <img src="background5.jpg" alt="House Image">
+                <img src="background6.jpg" alt="House Image">
+                <img src="background7.jpg" alt="House Image">
+                <img src="background8.jpg" alt="House Image">
+                <img src="background9.jpg" alt="House Image">
             </div>
         </div>
     </section>
     <section id="about" style="background-color: #f9f9f9;">
         <div class="container">
-            <h2>About Us</h2>
-            <p>Welcome to Florea's Resthouse, where luxury meets tranquility. Nestled amidst lush greenery and overlooking breathtaking landscapes, our accommodation offers an unparalleled experience of comfort and indulgence. Immerse yourself in the lavish interiors, unwind in the spacious bedrooms, and savor the finest amenities tailored to elevate your stay to new heights of opulence. Whether you seek a romantic retreat, a family getaway, or a corporate escape, Florea's Resthouse promises an unforgettable stay tailored to your every desire.</p>
+            <h2 data-translation-en="About Us" data-translation-ro="Despre noi">About Us</h2>
+            <p data-translation-en="Welcome to Florea's Resthouse, where luxury meets tranquility. Nestled amidst lush greenery and overlooking breathtaking landscapes, our accommodation offers an unparalleled experience of comfort and indulgence. Immerse yourself in the lavish interiors, unwind in the spacious bedrooms, and savor the finest amenities tailored to elevate your stay to new heights of opulence. Whether you seek a romantic retreat, a family getaway, or a corporate escape, Florea's Resthouse promises an unforgettable stay tailored to your every desire." data-translation-ro="Bine a?i venit la Casa de Oaspe?i a familiei Florea, unde luxul întâlne?te lini?tea. A?ezat printre vegeta?ia luxurianta ?i privind peisaje uluitoare, cazarea noastra ofera o experien?a de confort ?i rasfa? neegalata. Înconjura?i-va cu interioarele de lux, relaxa?i-va în dormitoarele spa?ioase ?i savura?i cele mai bune facilita?i create pentru a va ridica sejurul la noi culmi de opulen?a. Fie ca cauta?i o retragere romantica, o escapada în familie sau o evadare corporativa, Casa de Oaspe?i a familiei Florea promite un sejur de neuitat adaptat fiecarui dor.">Welcome to Florea's Resthouse, where luxury meets tranquility. Nestled amidst lush greenery and overlooking breathtaking landscapes, our accommodation offers an unparalleled experience of comfort and indulgence. Immerse yourself in the lavish interiors, unwind in the spacious bedrooms, and savor the finest amenities tailored to elevate your stay to new heights of opulence. Whether you seek a romantic retreat, a family getaway, or a corporate escape, Florea's Resthouse promises an unforgettable stay tailored to your every desire.</p>
         </div>
     </section>
     <section id="attractions">
         <div class="container">
-            <h2>Tourist Attractions in Oradea</h2>
+            <h2 data-translation-en="Tourist Attractions in Oradea" data-translation-ro="Atrac?ii turistice în Oradea">Tourist Attractions in Oradea</h2>
             <ul>
-                <li>Oradea Fortress - 5km</li>
-                <li>The Black Eagle Palace - 4.4km</li>
-                <li>Baroque Palace - 6.3km</li>
-                <li>Oradea City Hall - 4.6km</li>
-                <li>Ady Endre Museum - 5.6km</li>
-				<li>Baile Felix - 8.6km</li>
+                <li data-translation-en="Oradea Fortress - 5km" data-translation-ro="Cetatea Oradea - 5km">Oradea Fortress - 5km</li>
+                <li data-translation-en="The Black Eagle Palace - 4.4km" data-translation-ro="Palatul Vulturul Negru - 4.4km">The Black Eagle Palace - 4.4km</li>
+                <li data-translation-en="Baroque Palace - 6.3km" data-translation-ro="Palatul Baroc - 6.3km">Baroque Palace - 6.3km</li>
+                <li data-translation-en="Oradea City Hall - 4.6km" data-translation-ro="Primaria Oradea - 4.6km">Oradea City Hall - 4.6km</li>
+                <li data-translation-en="Ady Endre Museum - 5.6km" data-translation-ro="Muzeul Ady Endre - 5.6km">Ady Endre Museum - 5.6km</li>
+                <li data-translation-en="Baile Felix - 8.6km" data-translation-ro="Baile Felix - 8.6km">Baile Felix - 8.6km</li>
                 <!-- Add more attractions here -->
             </ul>
         </div>
     </section>
     <section id="contact">
         <div class="container">
-            <h2>Contact Us</h2>
+            <h2 data-translation-en="Contact Us" data-translation-ro="Contacta?i-ne">Contact Us</h2>
             <div class="contact-info">
-                <p>For inquiries and reservations, please call: <strong>+40729254939</strong></p>
-                <button>Contact Us</button>
+                <p data-translation-en="For inquiries and reservations, please call:" data-translation-ro="Pentru întrebari ?i rezervari, va rugam sa suna?i la:"><strong>For inquiries and reservations, please call:</strong> +40729254939</p>
+                <button id="toggleLanguage" onclick="toggleLanguage()" style="display: flex; align-items: center; justify-content: flex-end;">
+                    <img src="romanian_flag.png" alt="Romanian Flag" id="roFlag" style="width: 30px; height: auto; margin-right: 0px;">
+                    <img src="british_flag.png" alt="British Flag" id="enFlag" style="width: 30px; height: auto; display: none; margin-right: 0px;">
+
+                </button>
             </div>
-            <h3>Location</h3>
+            <h3 data-translation-en="Location" data-translation-ro="Loca?ie">Location</h3>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2691.0732390523477!2d21.908511215917582!3d47.06666997915212!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47451073d6795a51%3A0xf9441d4d14b024c1!2sGheorghe%20Tulbure%20Street%2C%20Oradea%2C%20Romania!5e0!3m2!1sen!2sro!4v1648430254307!5m2!1sen!2sro" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
-	<section id="instagram">
-		<div class="container">
-			<h2>Follow Us on Instagram</h2>
-			<div class="instagram-section">
-				<a href="https://www.instagram.com/florea.resthouse?igsh=MXRiOTI0dzliaDhxeg" target="_blank">
+    <section id="instagram">
+        <div class="container">
+            <h2 data-translation-en="Follow Us on Instagram" data-translation-ro="Urmari?i-ne pe Instagram">Follow Us on Instagram</h2>
+            <div class="instagram-section">
+                <a href="https://www.instagram.com/florea.resthouse?igsh=MXRiOTI0dzliaDhxeg" target="_blank">
                 <img src="instagram_logo.png" alt="Instagram Logo" style="width: 15px; height: 15px;">
                 florea.resthouse
             </a>
-			</div>
-		</div>
-	</section>
+            </div>
+        </div>
+    </section>
     <footer>
         <p>&copy; 2024 Florea's Resthouse. All rights reserved.</p>
     </footer>
+    <script>
+        var currentLanguage = 'en';
+
+        function toggleLanguage() {
+            var elements = document.querySelectorAll('[data-translation-' + currentLanguage + ']');
+            elements.forEach(function(element) {
+                var translation = element.getAttribute('data-translation-' + currentLanguage);
+                element.textContent = translation;
+            });
+            currentLanguage = (currentLanguage === 'en') ? 'ro' : 'en';
+            var roFlag = document.getElementById('roFlag');
+            var enFlag = document.getElementById('enFlag');
+            if (currentLanguage === 'en') {
+                roFlag.style.display = 'inline';
+                enFlag.style.display = 'none';
+            } else {
+                roFlag.style.display = 'none';
+                enFlag.style.display = 'inline';
+            }
+        }
+    </script>
 </body>
+</html>
