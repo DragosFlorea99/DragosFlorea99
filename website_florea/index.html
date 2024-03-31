@@ -26,20 +26,60 @@
             right: 90px; /* Adjust the position if necessary */
         }
 
-        @media screen and (max-width: 600px) {
-            button {
-                top: 90px; /* Adjust the position for smaller screens */
-                right: 20px;
-            }
-
-            #toggleToRomanian {
-                right: 90px; /* Adjust the position if necessary */
-            }
-        }
-
         /* Additional CSS for contact number */
         .contact-number {
             color: #000; /* Set the color according to your design */
+        }
+
+        /* Styles for the sidebar */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+            color: white;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: transparent;
+            color: white;
+            border: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 2;
+        }
+
+        .openbtn:hover {
+            color: #fff;
         }
     </style>
 </head>
@@ -135,12 +175,24 @@
     <footer>
         <p>&copy; 2024 Florea's Resthouse. All rights reserved.</p>
     </footer>
+    <span class="openbtn" onclick="openSidebar()">&#9776;</span>
+
     <button id="toggleToRomanian" onclick="changeToRomanian()">
         <img src="romanian_flag.png" alt="Romanian Flag">
     </button>
     <button id="toggleToEnglish" onclick="changeToEnglish()">
         <img src="british_flag.png" alt="British Flag">
     </button>
+
+    <div id="sidebar" class="sidebar">
+        <a href="#home" data-translation-en="Home" data-translation-ro="Acasa">Home</a>
+        <a href="#about" data-translation-en="About" data-translation-ro="Despre">About</a>
+        <a href="#gallery" data-translation-en="Gallery" data-translation-ro="Galerie">Gallery</a>
+        <a href="#attractions" data-translation-en="Tourist Attractions" data-translation-ro="Atractii Turistice">Tourist Attractions</a>
+        <a href="#contact" data-translation-en="Contact" data-translation-ro="Contact">Contact</a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+    </div>
+
     <script>
         function changeToRomanian() {
             var elements = document.querySelectorAll('[data-translation-en]');
@@ -156,6 +208,14 @@
                 var translation = element.getAttribute('data-translation-en');
                 element.textContent = translation;
             });
+        }
+
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
         }
     </script>
 </body>
